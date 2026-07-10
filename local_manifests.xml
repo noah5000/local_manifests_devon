@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="Deivid21/android_device_motorola_devon"
+           path="device/motorola/devon"
+           remote="github"
+           revision="lineage-23.2" />
+
+  <project name="Deivid21/android_device_motorola_sm6225-common"
+           path="device/motorola/sm6225-common"
+           remote="github"
+           revision="lineage-23.2" />
+
+  <project name="TheMuppets/proprietary_vendor_motorola_devon"
+           path="vendor/motorola/devon"
+           remote="github"
+           revision="lineage-23.2" />
+
+  <project name="noah5000/kernel_motorola_sm6225_Susfs"
+           path="kernel/motorola/sm6225"
+           remote="github"
+           revision="lineage-23.2" />
+</manifest>
