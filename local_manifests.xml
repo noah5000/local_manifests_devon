@@ -23,10 +23,10 @@ You're right on both counts. Let me update the manifest with your actual fork na
            remote="github"
            revision="lineage-23.2" />
 
-  <project name="LineageOS/android_kernel_motorola_sm6225"
-           path="kernel/motorola/sm6225"
-           remote="github"
-           revision="lineage-23.2" />
+<project name="redmax19/android_kernel_motorola_sm6225"
+         path="kernel/motorola/sm6225"
+         remote="github"
+         revision="lineage-23.2" />
 
   <project name="LineageOS/android_hardware_motorola"
            path="hardware/motorola"
