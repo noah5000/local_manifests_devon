@@ -3,9 +3,9 @@
   <project name="noah5000/android_device_motorola_devon_professor"
            path="device/motorola/devon"
            remote="github"
-           revision="lunaris" />
+           revision="lineage-23.2" />
 
-  <project name="LineageOS/android_device_motorola_sm6225-common"
+  <project name="noah5000/android_device_motorola_sm6225-common"
            path="device/motorola/sm6225-common"
            remote="github"
            revision="lineage-23.2" />
@@ -29,4 +29,9 @@
            path="hardware/motorola"
            remote="github"
            revision="lineage-23.2" />
+
+  <project name="realahnet/vendor_sony_dolby"
+           path="vendor/sony/dolby"
+           remote="github"
+           revision="sixteen" />
 </manifest>
