@@ -25,13 +25,10 @@
            remote="github"
            revision="lineage-23.2" />
 
-  <project name="LineageOS/android_hardware_motorola"
-           path="hardware/motorola"
+  <project name="AxionAOSP/android_packages_apps_AxionFx"
+           path="packages/apps/AxionFx"
            remote="github"
            revision="lineage-23.2" />
 
-  <project name="realahnet/vendor_sony_dolby"
-           path="vendor/sony/dolby"
-           remote="github"
-           revision="sixteen" />
+ 
 </manifest>
