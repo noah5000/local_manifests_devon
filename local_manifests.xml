@@ -3,7 +3,7 @@
   <project name="noah5000/android_device_motorola_devon_professor"
            path="device/motorola/devon"
            remote="github"
-           revision="lineage-23.2" />
+           revision="lunaris" />
 
   <project name="noah5000/android_device_motorola_sm6225-common"
            path="device/motorola/sm6225-common"
@@ -25,10 +25,13 @@
            remote="github"
            revision="lineage-23.2" />
 
+  <project name="LineageOS/android_hardware_motorola"
+           path="hardware/motorola"
+           remote="github"
+           revision="lineage-23.2" />
+
   <project name="AxionAOSP/android_packages_apps_AxionFx"
            path="packages/apps/AxionFx"
            remote="github"
            revision="lineage-23.2" />
-
- 
 </manifest>
