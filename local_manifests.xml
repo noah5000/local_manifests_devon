@@ -20,7 +20,7 @@
            remote="github"
            revision="lineage-23.2" />
 
-  <project name="redmax19/android_kernel_motorola_sm6225"
+  <project name="noah5000/kernel_motorola_sm6225_Susfs"
            path="kernel/motorola/sm6225"
            remote="github"
            revision="lineage-23.2" />
