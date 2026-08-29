@@ -28,7 +28,7 @@
   <project name="LineageOS/android_hardware_motorola"
            path="hardware/motorola"
            remote="github"
-           revision="Alpha" />
+           revision="alpha" />
   <!-- Hardware Pixelwork Interface -->
   <project name="AlphaDroid-Project/hardware_pixelworks_interfaces" 
            path="hardware/pixelworks/interfaces" 
