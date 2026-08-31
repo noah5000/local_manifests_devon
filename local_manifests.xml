@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote name="aosp"
+          fetch="https://android.googlesource.com/" />
+  
   <project name="noah5000/android_device_motorola_devon_professor"
            path="device/motorola/devon"
            remote="github"
@@ -34,4 +37,10 @@
            path="hardware/pixelworks/interfaces" 
            remote="github" 
            revision="alpha-16.2" />
+  
+  <project name="platform/packages/apps/Calendar"
+           path="packages/apps/Calendar"
+           remote="aosp"
+           revision="android-16.0.0_r4" />
+  
 </manifest>
