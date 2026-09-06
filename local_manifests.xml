@@ -24,7 +24,7 @@
   <project name="frosti500/android_kernel_motorola_sm6225"
            path="kernel/motorola/sm6225"
            remote="github"
-           revision="susfs" />
+           revision="ksun" />
 
   <project name="LineageOS/android_hardware_motorola"
            path="hardware/motorola"
