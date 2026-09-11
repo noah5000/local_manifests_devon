@@ -4,7 +4,7 @@
   <project name="noah5000/android_device_motorola_devon_professor"
            path="device/motorola/devon"
            remote="github"
-           revision="alpha" />
+           revision="lunaris" />
 
   <project name="noah5000/android_device_motorola_sm6225-common"
            path="device/motorola/sm6225-common"
@@ -26,14 +26,9 @@
            remote="github"
            revision="resuki" />
 
-  <project name="LineageOS/android_hardware_motorola"
+  <project name="noah5000/android_hardware_motorola"
            path="hardware/motorola"
            remote="github"
            revision="lineage-23.2" />
-  <!-- Hardware Pixelwork Interface -->
-  <project name="AlphaDroid-Project/hardware_pixelworks_interfaces" 
-           path="hardware/pixelworks/interfaces" 
-           remote="github" 
-           revision="alpha-16.2" />
   
 </manifest>
