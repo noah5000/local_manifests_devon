@@ -19,7 +19,7 @@
   <project name="TheMuppets/proprietary_vendor_motorola_devon"
            path="vendor/motorola/devon"
            remote="github"
-           revision="alpha" />
+           revision="lineage-23.2" />
 
   <project name="frosti500/android_kernel_motorola_sm6225"
            path="kernel/motorola/sm6225"
