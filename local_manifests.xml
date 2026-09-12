@@ -29,6 +29,6 @@
   <project name="noah5000/android_hardware_motorola"
            path="hardware/motorola"
            remote="github"
-           revision="lineage-23.2" />
+           revision="alpha" />
   
 </manifest>
