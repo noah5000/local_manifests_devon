@@ -31,4 +31,8 @@
            remote="github"
            revision="alpha" />
   
+  <project path="vendor/lunaris/dolby" 
+          name="tranQuila-Project/vendor_lunaris_dolby" 
+          remote="github" 
+          revision="main" />
 </manifest>
