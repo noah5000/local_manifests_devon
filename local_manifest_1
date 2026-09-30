@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="frosti500/device_motorola_devon" path="device/motorola/devon" remote="github" revision="cnb" />
+  <project name="Evolution-X-Devices/device_motorola_sm6225-common" path="device/motorola/sm6225-common" remote="github" revision="cnb" />
+  <project name="Evolution-X-Devices/kernel_motorola_sm6225" path="kernel/motorola/sm6225" remote="github" revision="cnb" />
+  <project name="Deivid-21s-Sources/proprietary_vendor_motorola_devon" path="vendor/motorola/devon" remote="github" revision="lineage-23.2" />
+  <project name="TheMuppets/proprietary_vendor_motorola_sm6225-common" path="vendor/motorola/sm6225-common" remote="github" revision="lineage-23.2" />
+  <project name="noah5000/android_hardware_motorola" path="hardware/motorola" remote="github" revision="alpha" />
+</manifest>
