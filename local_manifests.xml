@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PenguinOS (AOSPA/CLO base, branch celerity) local manifest for Moto G32 "devon" (SM6225 / bengal).
+  First version: meant for a sync test. Device trees are still the Infinity branches;
+  switch them to penguin-A17 branches once those exist.
+
+  Remotes already defined by the PenguinOS manifest and used here: github, aospa
+-->
+<manifest>
+
+  <!-- Extra remote for the AOSP kernel build tools (own name, so it cannot clash with PenguinOS remotes) -->
+  <remote name="aosp-km" fetch="https://android.googlesource.com" />
+
+  <!-- ===== Device (existing sources) ===== -->
+  <project name="noah5000/android_device_motorola_devon_professor"
+           path="device/motorola/devon"
+           remote="github"
+           revision="infinity-A17" />
+
+  <project name="noah5000/android_device_motorola_sm6225-common"
+           path="device/motorola/sm6225-common"
+           remote="github"
+           revision="Infinity-X-A17" />
+
+  <project name="TheMuppets/proprietary_vendor_motorola_sm6225-common"
+           path="vendor/motorola/sm6225-common"
+           remote="github"
+           revision="lineage-23.2" />
+
+  <project name="TheMuppets/proprietary_vendor_motorola_devon"
+           path="vendor/motorola/devon"
+           remote="github"
+           revision="lineage-23.2" />
+
+  <project name="frosti500/android_kernel_motorola_sm6225"
+           path="kernel/motorola/sm6225"
+           remote="github"
+           revision="resuki17" />
+
+  <project name="noah5000/android_hardware_motorola"
+           path="hardware/motorola"
+           remote="github"
+           revision="alpha" />
+
+  <!-- Dolby is left out of the first build:
+  <project name="tranQuila-Project/vendor_lunaris_dolby"
+           path="vendor/lunaris/dolby"
+           remote="github"
+           revision="main" />
+  -->
+
+  <!-- ===== In-tree kernel build (replaces vendor/lineage kernel build) ===== -->
+  <project name="noah5000/vendor_kernelbuild"
+           path="vendor/kernelbuild"
+           remote="github"
+           revision="main" />
+
+  <project name="kernel/prebuilts/build-tools"
+           path="prebuilts/kernel-build-tools"
+           remote="aosp-km"
+           revision="main-kernel-2025"
+           clone-depth="1" />
+
+  <project name="LineageOS/android_prebuilts_tools-lineage"
+           path="prebuilts/tools-lineage"
+           remote="github"
+           revision="lineage-24.0"
+           clone-depth="1" />
+
+  <!-- Remove AOSPA's kernel_definitions.mk auto-include (a second kernel build) by re-adding
+       the project at the same path without its linkfile -->
+  <remove-project name="AOSPA/android_kernel_build" />
+  <project name="AOSPA/android_kernel_build"
+           path="device/qcom/kernelscripts"
+           remote="aospa"
+           revision="calcite" />
+
+  <!-- ===== Qualcomm sepolicy (legacy-um) ===== -->
+  <!-- AOSPA's modern sepolicy_vndr sits at the same path as Lineage's SEPolicy.mk linkfile -->
+  <remove-project name="AOSPA/android_device_qcom_sepolicy_vndr" />
+
+  <project name="LineageOS/android_device_qcom_sepolicy_vndr"
+           path="device/qcom/sepolicy_vndr/legacy-um"
+           remote="github"
+           revision="lineage-24.0-legacy-um" />
+
+  <project name="LineageOS/android_device_lineage_sepolicy"
+           path="device/lineage/sepolicy"
+           remote="github"
+           revision="lineage-24.0" />
+
+  <!-- ===== Qualcomm HALs from Lineage (bengal is in the 4.19 family, kona/sm8250 sources) ===== -->
+  <project name="LineageOS/android_hardware_qcom-caf_common"
+           path="hardware/qcom-caf/common"
+           remote="github"
+           revision="lineage-24.0">
+    <!-- guard for AOSP hardware/qcom -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- guard so the sepolicy_vndr dispatcher exists -->
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <!-- guard for the sm8250 family -->
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+  </project>
+
+  <project name="LineageOS/android_hardware_qcom_audio"
+           path="hardware/qcom-caf/sm8250/audio"
+           remote="github"
+           revision="lineage-24.0-caf-sm8250" />
+
+  <project name="LineageOS/android_hardware_qcom_display"
+           path="hardware/qcom-caf/sm8250/display"
+           remote="github"
+           revision="lineage-24.0-caf-sm8250" />
+
+  <project name="LineageOS/android_hardware_qcom_media"
+           path="hardware/qcom-caf/sm8250/media"
+           remote="github"
+           revision="lineage-24.0-caf-sm8250" />
+
+  <!-- CLO media (modern libOmx*) duplicates the modules above -->
+  <remove-project name="platform/hardware/qcom/media" optional="true" />
+
+  <!-- Boot control: keep the Lineage one that already boots on devon -->
+  <project name="LineageOS/android_hardware_qcom_bootctrl"
+           path="hardware/qcom-caf/bootctrl"
+           remote="github"
+           revision="lineage-24.0-caf" />
+  <remove-project name="platform/hardware/qcom/bootctrl" optional="true" />
+
+  <!-- WLAN HAL: Lineage CAF version instead of AOSPA's hardware/qcom/wlan -->
+  <project name="LineageOS/android_hardware_qcom_wlan"
+           path="hardware/qcom-caf/wlan"
+           remote="github"
+           revision="lineage-24.0-caf" />
+  <remove-project name="AOSPA/android_hardware_qcom_wlan" />
+
+  <!-- Thermal: both Lineage variants (as in the Infinity tree), AOSPA's removed -->
+  <project name="LineageOS/android_hardware_qcom_thermal"
+           path="hardware/qcom-caf/thermal"
+           remote="github"
+           revision="lineage-24.0" />
+  <project name="LineageOS/android_hardware_qcom_thermal"
+           path="hardware/qcom-caf/thermal-legacy-um"
+           remote="github"
+           revision="lineage-24.0-legacy-um" />
+  <remove-project name="AOSPA/android_hardware_qcom_thermal" />
+
+  <!-- Power, USB, vibrator: Lineage versions (match devon's vintf), AOSPA's removed -->
+  <remove-project name="AOSPA/android_vendor_qcom-opensource_power" />
+  <project name="LineageOS/android_vendor_qcom_opensource_power"
+           path="vendor/qcom/opensource/power"
+           remote="github"
+           revision="lineage-24.0" />
+
+  <remove-project name="AOSPA/android_vendor_qcom-opensource_usb" />
+  <project name="LineageOS/android_vendor_qcom_opensource_usb"
+           path="vendor/qcom/opensource/usb"
+           remote="github"
+           revision="lineage-24.0" />
+
+  <remove-project name="AOSPA/android_vendor_qcom-opensource_vibrator" />
+  <project name="LineageOS/android_vendor_qcom_opensource_vibrator"
+           path="vendor/qcom/opensource/vibrator"
+           remote="github"
+           revision="lineage-24.0" />
+
+  <!-- Other Qualcomm pieces the common tree needs (new paths, PenguinOS does not have them) -->
+  <project name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr"
+           path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um"
+           remote="github"
+           revision="lineage-24.0-legacy-um" />
+
+  <project name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal"
+           path="vendor/qcom/opensource/audio-hal/st-hal"
+           remote="github"
+           revision="lineage-24.0" />
+
+  <project name="LineageOS/android_vendor_qcom_opensource_display"
+           path="vendor/qcom/opensource/display"
+           remote="github"
+           revision="lineage-24.0" />
+
+  <project name="LineageOS/android_vendor_codeaurora_telephony"
+           path="vendor/codeaurora/telephony"
+           remote="github"
+           revision="lineage-24.0" />
+
+</manifest>
