@@ -24,7 +24,7 @@
   <project name="frosti500/android_kernel_motorola_sm6225"
            path="kernel/motorola/sm6225"
            remote="github"
-           revision="resuki17" />
+           revision="A17V2" />
 
   <project name="noah5000/android_hardware_motorola"
            path="hardware/motorola"
