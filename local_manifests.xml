@@ -40,7 +40,7 @@
   <project name="noah5000/android_hardware_motorola"
            path="hardware/motorola"
            remote="github"
-           revision="lineageA17" />
+           revision="A17V2" />
 
   <!-- Dolby is left out of the first build:
   <project name="tranQuila-Project/vendor_lunaris_dolby"
