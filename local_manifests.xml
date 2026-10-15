@@ -15,12 +15,12 @@
   <project name="noah5000/android_device_motorola_devon_professor"
            path="device/motorola/devon"
            remote="github"
-           revision="infinity-A17" />
+           revision="penguin" />
 
   <project name="noah5000/android_device_motorola_sm6225-common"
            path="device/motorola/sm6225-common"
            remote="github"
-           revision="Infinity-X-A17" />
+           revision="penguin" />
 
   <project name="TheMuppets/proprietary_vendor_motorola_sm6225-common"
            path="vendor/motorola/sm6225-common"
@@ -40,7 +40,7 @@
   <project name="noah5000/android_hardware_motorola"
            path="hardware/motorola"
            remote="github"
-           revision="alpha" />
+           revision="lineageA17" />
 
   <!-- Dolby is left out of the first build:
   <project name="tranQuila-Project/vendor_lunaris_dolby"
