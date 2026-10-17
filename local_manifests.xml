@@ -188,5 +188,10 @@
            path="vendor/codeaurora/telephony"
            remote="github"
            revision="lineage-24.0" />
+  
+    <project name="tranQuila-Project/vendor_lunaris_dolby"
+           path="vendor/lunaris/dolby"
+           remote="github"
+           revision="main" />
 
 </manifest>
