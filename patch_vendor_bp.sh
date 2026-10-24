@@ -44,6 +44,6 @@ print("neutralized vendor/qcom/common makefiles:",c)
 os.makedirs("device/motorola/kernel-headers",exist_ok=True)
 open("device/motorola/kernel-headers/Android.bp","w").write("".join(
  'cc_library_headers {\n    name: "%s",\n    vendor_available: true,\n    host_supported: true,\n}\n\n'%n
- for n in ("qti_kernel_headers","device_kernel_headers","generated_kernel_headers")))
+  for n in ("qti_kernel_headers","generated_kernel_headers")))
 print("kernel header stubs written")
 EOF
