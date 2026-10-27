@@ -5,7 +5,7 @@ import os,re,glob
 DROP_IMPORTS=("hardware/qcom-caf/","vendor/qcom/opensource/display","vendor/qcom/opensource/dataservices")
 DROP_MODULES={
   "vendor/motorola/devon":{"libthermalclient","libofflinelog"},
-    "vendor/motorola/sm6225-common":{"vendor.qti.hardware.fm@1.0","vendor.qti.hardware.fm@1.0_vendor"},,
+    "vendor/motorola/sm6225-common":{"vendor.qti.hardware.fm@1.0","vendor.qti.hardware.fm@1.0_vendor"},
 }
 RENAME={'"libqti_vndfwk_detect"':'"libqti_vndfwk_detect_vendor"','"vendor.qti.hardware.fm@1.0_vendor"':'"vendor.qti.hardware.fm@1.0"'}
 def patch_bp(bp,drop):
